@@ -4,14 +4,15 @@
   "name": "News Reader",
   "description": "A little chrome extension to have a readable content on newspaper website.",
   "version": "1.0",
-
-  "browser_action": {
-    "default_icon": "icon.png"
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "scripts": ["background.js"]
   },
-  "content_scripts": [
-      {
-        "matches": ["http://www.letemps.ch/*"], 
-        "css" : ["css/letemps.css"]
-      }
-  ]
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Make this page red"
+  },
+  "web_accessible_resources": ["css/letemps.css"]
 }
