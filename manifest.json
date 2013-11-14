@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+
+  "name": "News Reader",
+  "description": "A little chrome extension to have a readable content on newspaper website.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+      {
+        "matches": ["http://www.letemps.ch/*"], 
+        "css" : ["css/letemps.css"]
+      }
+  ]
+}
