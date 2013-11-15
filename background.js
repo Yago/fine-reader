@@ -14,7 +14,7 @@ chrome.browserAction.onClicked.addListener(function(tab) {
     activeTabs.push(tab.id);
   }
   if(toggle){
-    chrome.browserAction.setIcon({path: "on.jpg", tabId:tab.id});
+    chrome.browserAction.setIcon({path: "on.png", tabId:tab.id});
     cssInject(tab);
   }
   else{
@@ -25,7 +25,7 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab){
   if(toggle && activeTabs.contains(tab.id)){
-    chrome.browserAction.setIcon({path: "on.jpg", tabId:tab.id});
+    chrome.browserAction.setIcon({path: "on.png", tabId:tab.id});
     cssInject(tab);
   }
 });

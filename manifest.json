@@ -1,9 +1,14 @@
 {
   "manifest_version": 2,
 
-  "name": "News Reader",
+  "name": "Fine Reader",
   "description": "A little chrome extension to have a readable content on newspaper website.",
   "version": "1.0",
+  "icons": {
+      "128": "icon_128.png",
+      "16": "icon_16.png",
+      "48": "icon_48.png"
+   },
   "permissions": [ "activeTab", "tabs", "http://*/*", "https://*/*" ],
   "background": {
     "scripts": ["background.js"]
