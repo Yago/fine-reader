@@ -31,5 +31,5 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab){
 });
 
 function cssInject(tab){
-  chrome.tabs.insertCSS(tab.id, {file: "css/letemps.css", allFrames: true});
+  chrome.tabs.insertCSS(tab.id, {file: "css/fine-reader.css", allFrames: true});
 }

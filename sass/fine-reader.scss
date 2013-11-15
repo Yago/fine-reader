@@ -1,0 +1,53 @@
+@import url(http://fonts.googleapis.com/css?family=Vollkorn:400,600,400italic);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:700);
+
+$background:                #fafafa;
+$mine:                      #333333;
+
+html, body, header, footer, div, p, .content-wrapper, h1, h2, h3, h4, h5, h6 {
+  background: $background !important;
+  color: $mine;
+}
+
+#advertisement, .advertisement, .ads, #ads, .banner, #banner {
+  display: none !important;
+}
+
+body {
+  max-width: 550px !important;
+  margin: 0 auto !important;
+}
+
+div {
+  width: 100% !important;
+}
+
+img {
+  max-width: 100% !important;
+  height: auto !important;
+  box-sizing: border-box !important;
+  vertical-align: middle !important;
+  margin: 20px inherit !important;
+  display: block !important;
+  float: none !important;
+}
+
+img:before, img:after {
+  content: 'img-border' !important;
+  //color: rgba(0, 0, 0, 0) !important;
+  clear: both !important;
+  display: block !important;
+  margin: 0 500px !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+p {
+  font-family: 'Vollkorn', Georgia, serif !important;
+  font-weight: 400 !important;
+  font-size: 22px !important;
+  line-height: 1.5em !important;
+}
