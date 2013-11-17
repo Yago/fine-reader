@@ -31,5 +31,6 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab){
 });
 
 function cssInject(tab){
-  chrome.tabs.insertCSS(tab.id, {file: "css/fine-reader.css", allFrames: true});
+  chrome.tabs.executeScript(tab.id, {code:"document.getElementsByTagName('link')[0].href = '';"});
+  chrome.tabs.insertCSS(tab.id, {file: "css/fine-readers.css", allFrames: true});
 }
