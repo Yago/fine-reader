@@ -1,4 +1,4 @@
-chrome-reader
+Fine Reader
 =============
 
-A little chrome extension to have a readable content on newspaper website
+A Chrome extension to have a readable content.
