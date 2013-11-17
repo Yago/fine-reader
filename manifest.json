@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Fine Reader",
-  "description": "A little chrome extension to have a readable content on newspaper website.",
+  "description": "A Chrome extension to have a readable content.",
   "version": "1.0",
   "icons": {
       "128": "icon_128.png",
@@ -15,7 +15,7 @@
   },
   "browser_action": {
     "default_icon": "off.png",
-    "default_title": "Make this page red"
+    "default_title": "Enable Fine Reader"
   },
   "web_accessible_resources": ["css/letemps.css"]
 }
