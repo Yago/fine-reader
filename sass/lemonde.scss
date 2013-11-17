@@ -1,0 +1,40 @@
+#surheader, #header_utilisateur {display: none;}
+
+.btn_lecture_zen {
+  content: 'Lecture Zen';
+  width: 30px;
+  height: 30px;
+  color: $white;
+  background: $mine !important;
+  display: block !important;
+  position: fixed;
+  cursor: pointer;
+  @include border-radius(5px);
+  @include transition(all);
+  @include box-shadow(0, 3px, 0, 0, lighten($mine, 20%));
+  &:hover {
+    background: $silver !important;
+  }
+}
+
+.offre_decouverte, .conteneur_ligatus, .reco_cross_site_outbrain, .btn_abo {display: none !important;}
+
+.lecture_zen {
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  background: $background !important;
+  .grid_12 {
+    max-width: 550px;
+    margin: 0 auto;
+  }
+}
+
+.lecture_zen strong, p.lead {
+  display: block;
+  font-family: $title;
+  font-weight: 700;
+  font-size: 30px;
+  padding-top: 30px;
+}

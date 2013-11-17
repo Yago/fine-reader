@@ -1,0 +1,108 @@
+// General -----------------------------
+
+* {
+  background-image: none !important;
+  background: $background !important;
+}
+
+body {
+  background: $background !important;
+  background-image: none !important;
+  max-width: 40%;
+  margin: 0 auto;
+  padding-top: 40px;
+  position: static;
+}
+
+*[class*="bann"],
+*[id*="bann"],
+*[class*="ads"],
+*[id*="ads"],
+*[class*="pub"],
+*[id*="pub"],
+*[class*="adv"],
+*[id*="adv"],
+embed,
+iframe {
+  display: none;
+}
+
+div {
+  width: 100%;
+}
+
+// Images -----------------------------
+
+img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  box-sizing: border-box;
+  vertical-align: middle;
+  margin: 20px auto;
+  display: inline-block;
+}
+
+img:before, img:after {
+  content: 'img-border';
+  //color: rgba(0, 0, 0, 0);
+  clear: both;
+  display: block;
+  margin: 0 500px;
+}
+
+// Lists -----------------------------
+
+dl, menu, ol, ul {margin: 0;}
+dd {margin: 0;}
+menu, ol, ul {padding: 0;}
+li {list-style-type: disc;}
+
+// Navigation ---------------------------------
+
+nav ul, nav ol, nav li {list-style: none;  list-style-image: none;}
+
+nav,
+*[class*="nav"],
+*[id*="nav"],
+*[class*="menu"],
+*[id*="menu"] {
+  padding: 0;
+  padding: 40px 0;
+  width: 100% !important;
+  &:after {
+    content: 'end';
+    height: 1px;
+    color: $background;
+    display: block;
+    clear: both;
+  }
+  li {
+    display: inline;
+    span, p, h1, h2, h3, h4, h5, h6 {display: none;}
+  }
+  a {
+    background: transparent !important;
+    display: block;
+    font-family: $title;
+    font-weight: 700;
+    float: left;
+    font-size: 14px;
+    padding: 5px 15px;
+    margin: 1px 2px;
+    border-top: 3px solid darken($background, 5%);
+    color: lighten($mine, 15%);
+    @include box-sizing(border-box);
+    @include transition(all);
+    span, p, h1, h2, h3, h4, h5, h6 {display: inline;}
+    &:hover {
+      color: $mine;
+      border-color: $water;
+    }
+  }
+  .actif, .active, .current {
+    border-color: $water;
+    a {border-color: $water;}
+  }
+}
+

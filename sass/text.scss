@@ -1,0 +1,67 @@
+body {
+  font-family: $text;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+// Titles -------------------------------------
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $title;
+  font-weight: 700;
+  line-height: 1em;
+  margin: 2em 0 0.3em 0;
+}
+
+@mixin titleSize($size){
+  font-size: $size;
+  @media only screen and (max-width: 767px) {
+    font-size: $size / 1.3;
+  }
+}
+
+h1 {
+  @include titleSize(40px);
+  text-transform: uppercase;
+}
+
+h2 {
+  @include titleSize(35px);
+  text-transform: uppercase;
+}
+
+h3 {@include titleSize(30px);}
+h4 {@include titleSize(28px);}
+h5 {@include titleSize(25px);}
+h6 {@include titleSize(22px);}
+
+// Paragraphs ---------------------------------
+
+p {
+  font-family: $text;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.5em;
+}
+
+// Font style ---------------------------------
+
+strong, b {
+  font-weight: 600;
+}
+
+// Links -------------------------------------
+
+a {
+  color: $water;
+  text-decoration: none;
+  padding: 0 5px;
+  @include transition(color);
+  &:hover {color: darken($water, 15%);}
+  &:active {color: darken($water, 5%);}
+  h1, h2, h3, h4, h5, h6 {color: $mine;}
+}
+
+h1, h2, h3, h4, h5, h6 {
+  a {color: $mine;}
+}
