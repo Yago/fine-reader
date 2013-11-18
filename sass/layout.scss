@@ -14,6 +14,10 @@ body {
   position: static;
 }
 
+div, p, h1, h2, h3, h4, h5, h6, section {
+  width: 100% !important;
+}
+
 *[class*="bann"],
 *[id*="bann"],
 *[class*="ads"],
@@ -61,8 +65,11 @@ li {list-style-type: disc;}
 // Navigation ---------------------------------
 
 nav ul, nav ol, nav li {list-style: none;  list-style-image: none;}
+ul li {list-style-type: none;}
 
 nav,
+*[class*="Nav"],
+*[id*="Nav"],
 *[class*="nav"],
 *[id*="nav"],
 *[class*="menu"],
@@ -83,7 +90,7 @@ nav,
   }
   a {
     background: transparent !important;
-    display: block;
+    display: inline-block;
     font-family: $title;
     font-weight: 700;
     float: left;

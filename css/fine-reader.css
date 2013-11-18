@@ -12,6 +12,9 @@ body {
   padding-top: 40px;
   position: static; }
 
+div, p, h1, h2, h3, h4, h5, h6, section {
+  width: 100% !important; }
+
 *[class*="bann"],
 *[id*="bann"],
 *[class*="ads"],
@@ -58,7 +61,12 @@ nav ul, nav ol, nav li {
   list-style: none;
   list-style-image: none; }
 
+ul li {
+  list-style-type: none; }
+
 nav,
+*[class*="Nav"],
+*[id*="Nav"],
 *[class*="nav"],
 *[id*="nav"],
 *[class*="menu"],
@@ -67,6 +75,8 @@ nav,
   padding: 40px 0;
   width: 100% !important; }
   nav:after,
+  *[class*="Nav"]:after,
+  *[id*="Nav"]:after,
   *[class*="nav"]:after,
   *[id*="nav"]:after,
   *[class*="menu"]:after,
@@ -77,12 +87,30 @@ nav,
     display: block;
     clear: both; }
   nav li,
+  *[class*="Nav"] li,
+  *[id*="Nav"] li,
   *[class*="nav"] li,
   *[id*="nav"] li,
   *[class*="menu"] li,
   *[id*="menu"] li {
     display: inline; }
     nav li span, nav li p, nav li h1, nav li h2, nav li h3, nav li h4, nav li h5, nav li h6,
+    *[class*="Nav"] li span,
+    *[class*="Nav"] li p,
+    *[class*="Nav"] li h1,
+    *[class*="Nav"] li h2,
+    *[class*="Nav"] li h3,
+    *[class*="Nav"] li h4,
+    *[class*="Nav"] li h5,
+    *[class*="Nav"] li h6,
+    *[id*="Nav"] li span,
+    *[id*="Nav"] li p,
+    *[id*="Nav"] li h1,
+    *[id*="Nav"] li h2,
+    *[id*="Nav"] li h3,
+    *[id*="Nav"] li h4,
+    *[id*="Nav"] li h5,
+    *[id*="Nav"] li h6,
     *[class*="nav"] li span,
     *[class*="nav"] li p,
     *[class*="nav"] li h1,
@@ -117,12 +145,14 @@ nav,
     *[id*="menu"] li h6 {
       display: none; }
   nav a,
+  *[class*="Nav"] a,
+  *[id*="Nav"] a,
   *[class*="nav"] a,
   *[id*="nav"] a,
   *[class*="menu"] a,
   *[id*="menu"] a {
     background: transparent !important;
-    display: block;
+    display: inline-block;
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 700;
     float: left;
@@ -138,6 +168,22 @@ nav,
     -webkit-transition: all 0.4s;
     -moz-transition: all 0.4s; }
     nav a span, nav a p, nav a h1, nav a h2, nav a h3, nav a h4, nav a h5, nav a h6,
+    *[class*="Nav"] a span,
+    *[class*="Nav"] a p,
+    *[class*="Nav"] a h1,
+    *[class*="Nav"] a h2,
+    *[class*="Nav"] a h3,
+    *[class*="Nav"] a h4,
+    *[class*="Nav"] a h5,
+    *[class*="Nav"] a h6,
+    *[id*="Nav"] a span,
+    *[id*="Nav"] a p,
+    *[id*="Nav"] a h1,
+    *[id*="Nav"] a h2,
+    *[id*="Nav"] a h3,
+    *[id*="Nav"] a h4,
+    *[id*="Nav"] a h5,
+    *[id*="Nav"] a h6,
     *[class*="nav"] a span,
     *[class*="nav"] a p,
     *[class*="nav"] a h1,
@@ -172,6 +218,8 @@ nav,
     *[id*="menu"] a h6 {
       display: inline; }
     nav a:hover,
+    *[class*="Nav"] a:hover,
+    *[id*="Nav"] a:hover,
     *[class*="nav"] a:hover,
     *[id*="nav"] a:hover,
     *[class*="menu"] a:hover,
@@ -179,6 +227,12 @@ nav,
       color: #333333;
       border-color: #2d95e3; }
   nav .actif, nav .active, nav .current,
+  *[class*="Nav"] .actif,
+  *[class*="Nav"] .active,
+  *[class*="Nav"] .current,
+  *[id*="Nav"] .actif,
+  *[id*="Nav"] .active,
+  *[id*="Nav"] .current,
   *[class*="nav"] .actif,
   *[class*="nav"] .active,
   *[class*="nav"] .current,
@@ -193,6 +247,12 @@ nav,
   *[id*="menu"] .current {
     border-color: #2d95e3; }
     nav .actif a, nav .active a, nav .current a,
+    *[class*="Nav"] .actif a,
+    *[class*="Nav"] .active a,
+    *[class*="Nav"] .current a,
+    *[id*="Nav"] .actif a,
+    *[id*="Nav"] .active a,
+    *[id*="Nav"] .current a,
     *[class*="nav"] .actif a,
     *[class*="nav"] .active a,
     *[class*="nav"] .current a,
@@ -260,7 +320,8 @@ p {
   font-family: "Vollkorn", Georgia, serif;
   font-weight: 400;
   font-size: 22px;
-  line-height: 1.5em; }
+  line-height: 1.5em;
+  margin: 1em 0; }
 
 strong, b {
   font-weight: 600; }
@@ -327,3 +388,6 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-weight: 700;
   font-size: 30px;
   padding-top: 30px; }
+
+.articleSharing, #singleLeft #contentbox, #mainColRight, #mainSubfeatures {
+  display: none; }

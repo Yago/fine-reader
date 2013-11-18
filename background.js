@@ -1,9 +1,9 @@
 Array.prototype.contains = function ( needle ) {
-   for (i in this) {
-       if (this[i] == needle) return true;
-   }
-   return false;
-}
+  for (var i in this) {
+     if (this[i] == needle) return true;
+  }
+  return false;
+};
 
 var toggle = false;
 var activeTabs = Array();
